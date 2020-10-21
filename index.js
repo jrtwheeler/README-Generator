@@ -27,6 +27,16 @@ function promptUser() {
       type: "input",
       name: "usage_information",
       message: "Enter usage information."
+    },
+    {
+      type: "input",
+      name: "contributing_guidelines",
+      message: "Enter contributing guidelines."
+    },
+    {
+      type: "input",
+      name: "test_instructions",
+      message: "Enter test instructions."
     }
   ]);
   // What is your github name, what is your email, 
@@ -52,7 +62,9 @@ function generateHTML(answers) {
   
   Licensed under the MIT license.
   ## Contributing Guidelines
+  ${answers.contributing_guidelines}
   ## Tests
+  ${answers.test_instructions}
   ## Questions
 `;
 }
