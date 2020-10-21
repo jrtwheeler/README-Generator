@@ -10,6 +10,11 @@ function promptUser() {
   return inquirer.prompt([
     {
       type: "input",
+      name: "email",
+      message: "Enter email address."
+    },
+    {
+      type: "input",
       name: "name",
       message: "What is the README title?"
     },
@@ -37,6 +42,16 @@ function promptUser() {
       type: "input",
       name: "test_instructions",
       message: "Enter test instructions."
+    }, 
+    {
+      type: "list",
+      message: "What is your preferred license?",
+      name: "contact",
+      choices: [
+        "MIT",
+        "phone",
+        "telekinesis"
+      ]
     }
   ]);
   // What is your github name, what is your email, 
@@ -66,6 +81,7 @@ function generateHTML(answers) {
   ## Tests
   ${answers.test_instructions}
   ## Questions
+  If you have any further questions, please contact me at ${answers.email}
 `;
 }
 
