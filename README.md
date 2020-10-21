@@ -1,4 +1,5 @@
 # t
+  [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
   ## Table of Contents
   * [Installation](#Installation)
   * [Description](#Description)
@@ -22,4 +23,4 @@
   t
   ## Questions
   If you have any further questions, please contact me at t.
-  My GitHub profile is [Github Repo](https://github.com/jrtwheeler).
+  My GitHub profile is [Github Repo](https://github.com/t).

@@ -63,7 +63,16 @@ function promptUser() {
 function init() {
   promptUser()
     .then(function (answers) {
-      const html = generateMarkdown(answers);
+      if (answers.license === "MIT"){
+          var license = "[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)";
+      }
+      if (answers.license === "GNU GPLv3"){
+        var license = "[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)";
+      }
+      if (answers.license === "GNU GPLv2") {
+      var license = "[![License: GPL v2](https://img.shields.io/badge/License-GPL%20v2-blue.svg)](https://www.gnu.org/licenses/old-licenses/gpl-2.0.en.html)";
+      }
+      const html = generateMarkdown(answers, license);
 
       // Write contents of html to index.html
       return writeFileAsync("README.md", html);
