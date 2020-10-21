@@ -11,50 +11,46 @@ function promptUser() {
     {
       type: "input",
       name: "email",
-      message: "Enter email address."
+      message: "Enter email address.",
     },
     {
       type: "input",
       name: "name",
-      message: "What is the README title?"
+      message: "What is the README title?",
     },
     {
       type: "input",
       name: "description",
-      message: "Enter a project description."
+      message: "Enter a project description.",
     },
     {
       type: "input",
       name: "installation_instructions",
-      message: "Enter installation instructions."
+      message: "Enter installation instructions.",
     },
     {
       type: "input",
       name: "usage_information",
-      message: "Enter usage information."
+      message: "Enter usage information.",
     },
     {
       type: "input",
       name: "contributing_guidelines",
-      message: "Enter contributing guidelines."
+      message: "Enter contributing guidelines.",
     },
     {
       type: "input",
       name: "test_instructions",
-      message: "Enter test instructions."
-    }, 
+      message: "Enter test instructions.",
+    },
     {
       type: "list",
       message: "What is your preferred license?",
       name: "contact",
-      choices: [
-        "MIT",
-        "phone",
-        "telekinesis"
-      ]
-    }
+      choices: ["MIT", "phone", "telekinesis"],
+    },
   ]);
-  // What is your github name, what is your email, 
+  // What is your github name, what is your email,
 }
 
 function generateHTML(answers) {
@@ -87,20 +83,20 @@ function generateHTML(answers) {
 
 // Call prompt user to kick off our inquirer prompts
 // Grab the answers, place them in a variable function call
-function init () {
-promptUser()
-  .then(function(answers) {
-    const html = generateHTML(answers);
+function init() {
+  promptUser()
+    .then(function (answers) {
+      const html = generateHTML(answers);
 
-    // Write contents of html to index.html
-    return writeFileAsync("README.md", html);
-  })
-  .then(function() {
-    console.log("Successfully wrote to index.html");
-  })
-  .catch(function(err) {
-    console.log(err);
-  })
+      // Write contents of html to index.html
+      return writeFileAsync("README.md", html);
+    })
+    .then(function () {
+      console.log("Successfully wrote to index.html");
+    })
+    .catch(function (err) {
+      console.log(err);
+    });
 }
 
 init();
