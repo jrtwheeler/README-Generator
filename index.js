@@ -16,22 +16,17 @@ function promptUser() {
     {
       type: "input",
       name: "description",
-      message: "Enter a project description"
-    },
-    {
-      type: "input",
-      name: "table_of_contents",
-      message: "Enter a table of contents"
+      message: "Enter a project description."
     },
     {
       type: "input",
       name: "installation_instructions",
-      message: "Enter installation instructions"
+      message: "Enter installation instructions."
     },
     {
       type: "input",
       name: "usage_information",
-      message: "Enter usage information"
+      message: "Enter usage information."
     }
   ]);
   // What is your github name, what is your email, 
@@ -46,18 +41,19 @@ function generateHTML(answers) {
   * [License](#License)
   ## Description
   ${answers.description}
-  ## Usage
   ![Web page](assets/img/portfolio-index.png)
   ![Web page](assets/img/portfolio-portfolio.png)
-  ## Credits
-  * Javascript
-  * CSS
-  * HTML
-  * Bootstrap
+  ## Installation
+  ${answers.installation_instructions}
+  ## Usage Information
+  ${answers.usage_information}
   ## License
   Copyright (c) Microsoft Corporation. All rights reserved.
   
   Licensed under the MIT license.
+  ## Contributing Guidelines
+  ## Tests
+  ## Questions
 `;
 }
 
