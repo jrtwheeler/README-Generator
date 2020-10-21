@@ -40,10 +40,10 @@ function promptUser() {
 function generateHTML(answers) {
   return ` # ${answers.name}
   ## Table of Contents
-  [Installation](#Installation)
-  [Description](#Description)
-  [Usage](#Usage)
-  [License](#License)
+  * [Installation](#Installation)
+  * [Description](#Description)
+  * [Usage](#Usage)
+  * [License](#License)
   ## Description
   ${answers.description}
   ## Usage
