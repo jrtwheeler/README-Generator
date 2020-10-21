@@ -1,9 +1,9 @@
-// Import our required modules
+// Import required modules
 const inquirer = require("inquirer");
 const fs = require("fs");
 const util = require("util");
 
-// Promisify our writeFile function
+// Promisify writeFile function
 const writeFileAsync = util.promisify(fs.writeFile);
 // If you google github badges, you wil be able to insert the license choice into the URL. So if you have that list of licneses...
 function promptUser() {
@@ -47,12 +47,12 @@ function promptUser() {
       type: "list",
       message: "What is your preferred license?",
       name: "contact",
-      choices: ["MIT", "phone", "telekinesis"],
+      choices: ["MIT", "GNU GPLv3", "GNU GPLv2"],
     },
   ]);
-  // What is your github name, what is your email,
 }
 
+//Generate the HTML with template literals
 function generateHTML(answers) {
   return ` # ${answers.name}
   ## Table of Contents
