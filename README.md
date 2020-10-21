@@ -1,4 +1,4 @@
-# t
+# README Generator
   [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
   ## Table of Contents
   * [Installation](#Installation)
@@ -6,21 +6,21 @@
   * [Usage](#Usage)
   * [License](#License)
   ## Description
-  t
+  The README generator is a javascript program that produces a high quality, formatted README file upon demand. The README file lets visitors to a GitHub repo know the details of the product, including a project description, usage requirements, opportunities to contribute, the license, questions, and installation directions. Yet a lot of coders overlook it and fail to include it at all. This automation saves the time needed to assemble the README and automates its produciton.
   ![Web page](assets/img/portfolio-index.png)
   ![Web page](assets/img/portfolio-portfolio.png)
   ## Installation
-  t
+  To install the README Generator, clone the repo.
   ## Usage Information
-  t
+  Upon instalation, enter the command node index.js in the command line.
   ## License
   Copyright (c) Microsoft Corporation. All rights reserved.
   
   Licensed under the MIT license.
   ## Contributing Guidelines
-  t
+  To contribute, please contact me at my email address.
   ## Tests
-  t
+  Enter the command node index.js, and then open the README generated in the cloned repo.
   ## Questions
-  If you have any further questions, please contact me at t.
-  My GitHub profile is [Github Repo](https://github.com/t).
+  If you have any further questions, please contact me at jwheele1@gmail.com.
+  My GitHub profile is [Github Repo](https://github.com/jrtwheeler).
