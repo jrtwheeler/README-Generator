@@ -2,6 +2,7 @@
 const inquirer = require("inquirer");
 const fs = require("fs");
 const util = require("util");
+var generateMarkdown = require('./utils/generateMarkdown.js');
 
 // Promisify writeFile function
 const writeFileAsync = util.promisify(fs.writeFile);
@@ -44,41 +45,17 @@ function promptUser() {
       message: "Enter test instructions.",
     },
     {
+      type: "input",
+      name: "gitHub",
+      message: "Enter GitHub username.",
+    },
+    {
       type: "list",
       message: "What is your preferred license?",
-      name: "contact",
+      name: "license",
       choices: ["MIT", "GNU GPLv3", "GNU GPLv2"],
     },
   ]);
-}
-
-//Generate the HTML with template literals
-function generateHTML(answers) {
-  return ` # ${answers.name}
-  ## Table of Contents
-  * [Installation](#Installation)
-  * [Description](#Description)
-  * [Usage](#Usage)
-  * [License](#License)
-  ## Description
-  ${answers.description}
-  ![Web page](assets/img/portfolio-index.png)
-  ![Web page](assets/img/portfolio-portfolio.png)
-  ## Installation
-  ${answers.installation_instructions}
-  ## Usage Information
-  ${answers.usage_information}
-  ## License
-  Copyright (c) Microsoft Corporation. All rights reserved.
-  
-  Licensed under the MIT license.
-  ## Contributing Guidelines
-  ${answers.contributing_guidelines}
-  ## Tests
-  ${answers.test_instructions}
-  ## Questions
-  If you have any further questions, please contact me at ${answers.email}
-`;
 }
 
 // Call prompt user to kick off our inquirer prompts
@@ -86,13 +63,13 @@ function generateHTML(answers) {
 function init() {
   promptUser()
     .then(function (answers) {
-      const html = generateHTML(answers);
+      const html = generateMarkdown(answers);
 
       // Write contents of html to index.html
       return writeFileAsync("README.md", html);
     })
     .then(function () {
-      console.log("Successfully wrote to index.html");
+      console.log("Successfully wrote to README.md");
     })
     .catch(function (err) {
       console.log(err);
