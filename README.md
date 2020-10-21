@@ -7,8 +7,8 @@
   * [License](#License)
   ## Description
   The README generator is a javascript program that produces a high quality, formatted README file upon demand. The README file lets visitors to a GitHub repo know the details of the product, including a project description, usage requirements, opportunities to contribute, the license, questions, and installation directions. Yet a lot of coders overlook it and fail to include it at all. This automation saves the time needed to assemble the README and automates its produciton.
-  ![Web page](assets/img/portfolio-index.png)
-  ![Web page](assets/img/portfolio-portfolio.png)
+  ![Web page](img/README.png)
+  ![Web page](img/command_line.png)
   ## Installation
   To install the README Generator, clone the repo.
   ## Usage Information
