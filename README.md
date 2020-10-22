@@ -5,7 +5,7 @@
   * [Installation](#Installation)
   * [Usage](#Usage)
   * [License](#License)
-  * [Contributing](#Contributing Guidelines)
+  * [Contribute](#Contribute)
   * [Tests](#Tests)
   * [Questions](#Questions)
   ## Description
@@ -21,7 +21,7 @@
   Copyright (c) Microsoft Corporation. All rights reserved.
   
   Licensed under the MIT license.
-  ## Contributing Guidelines
+  ## Contribute
   Answer the prompts. View a demo [here](https://drive.google.com/file/d/1yqF2Do7sPyDc9wMi5_-Mz09xYJF8bVyu/view?usp=sharing).
   ## Tests
   Enter the command node index.js, and then open the README generated in the cloned repo.
