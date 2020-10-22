@@ -17,12 +17,13 @@
   To install the application, clone the repository. Enter the command npm install inquirer to install the necessary package.
   ## Usage Information
   Upon instalation, enter the command node index.js in the command line.
+  Answer the prompts. View a demo [here](https://drive.google.com/file/d/1yqF2Do7sPyDc9wMi5_-Mz09xYJF8bVyu/view?usp=sharing).
   ## License
   Copyright (c) Microsoft Corporation. All rights reserved.
   
   Licensed under the MIT license.
   ## Contribute
-  Answer the prompts. View a demo [here](https://drive.google.com/file/d/1yqF2Do7sPyDc9wMi5_-Mz09xYJF8bVyu/view?usp=sharing).
+  To contribute please contact me at my email address.
   ## Tests
   Enter the command node index.js, and then open the README generated in the cloned repo.
   ## Questions
