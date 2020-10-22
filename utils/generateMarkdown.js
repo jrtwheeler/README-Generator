@@ -3,10 +3,13 @@ function generateMarkdown(answers, license) {
   return `# ${answers.name}
   ${license}
   ## Table of Contents
-  * [Installation](#Installation)
   * [Description](#Description)
+  * [Installation](#Installation)
   * [Usage](#Usage)
   * [License](#License)
+  * [Contributing](#Contributing Guidelines)
+  * [Tests](#Tests)
+  * [Questions](#Questions)
   ## Description
   ${answers.description}
   ![Web page](assets/img/portfolio-index.png)
