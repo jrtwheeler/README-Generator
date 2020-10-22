@@ -13,6 +13,7 @@
   To install the README Generator, clone the repo.
   ## Usage Information
   Upon instalation, enter the command node index.js in the command line.
+  Answer the prompts. View a demo [here](https://drive.google.com/file/d/1olqwsOEOfCODzHG02rL4JVKtrGqlS5FY/view?usp=sharing)
   ## License
   Copyright (c) Microsoft Corporation. All rights reserved.
   
