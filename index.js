@@ -7,6 +7,9 @@ var generateMarkdown = require('./utils/generateMarkdown');
 var promptUser = require('./utils/promptUser');
 const OUTPUT_DIR = path.resolve(__dirname, "output");
 const outputPath = path.join(OUTPUT_DIR, "README.md");
+const logo = require('asciiart-logo');
+const config = require('./package.json');
+console.log(logo(config).render());
 
 // Promisify writeFile function
 const writeFileAsync = util.promisify(fs.writeFile);
@@ -35,7 +38,7 @@ function init() {
       // return writeFileAsync("README.md", html);
     })
     .then(function () {
-      console.log("Successfully wrote to README.md");
+      console.log("Successfully wrote README.md to output folder");
     })
     .catch(function (err) {
       console.log(err);
