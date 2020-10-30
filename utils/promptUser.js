@@ -7,6 +7,8 @@ function promptUser() {
         type: "input",
         name: "email",
         message: "Enter email address.",
+        default: () => { },
+        validate: validateEmail
       },
       {
         type: "input",
@@ -51,5 +53,16 @@ function promptUser() {
       },
     ]);
   }
+
+  const validateEmail = (email) => {
+    valid = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email)
+    if (valid) {
+        console.log(" - Email validated");
+        return true;
+    } else {
+        console.log(".  Please enter a valid email")
+        return false;
+    }
+}
 
   module.exports = promptUser;
