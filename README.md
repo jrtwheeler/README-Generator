@@ -14,7 +14,7 @@
   ![Web page](img/README.png)
   ![Web page](img/command_line.png)
   ## Installation
-  To install the application, clone the repository. Enter the command npm install inquirer to install the necessary package.
+  To install the application, clone the repository. Enter the command npm install inquirer to install the necessary package. Enter the command npm install asciiart-logo.
   ## Usage Information
   Upon instalation, enter the command node index.js in the command line.
   Answer the prompts. View a demo [here](https://drive.google.com/file/d/1yqF2Do7sPyDc9wMi5_-Mz09xYJF8bVyu/view?usp=sharing).
