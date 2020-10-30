@@ -2,8 +2,11 @@
 const inquirer = require("inquirer");
 const fs = require("fs");
 const util = require("util");
+const path = require("path");
 var generateMarkdown = require('./utils/generateMarkdown');
 var promptUser = require('./utils/promptUser');
+const OUTPUT_DIR = path.resolve(__dirname, "output");
+const outputPath = path.join(OUTPUT_DIR, "README.md");
 
 // Promisify writeFile function
 const writeFileAsync = util.promisify(fs.writeFile);
@@ -24,8 +27,12 @@ function init() {
       }
       const html = generateMarkdown(answers, license);
 
+    if (!fs.existsSync(OUTPUT_DIR)) {
+        fs.mkdirSync(OUTPUT_DIR)
+    }
+    return fs.writeFileSync(outputPath, html, "utf-8");
       // Write contents of html to index.html
-      return writeFileAsync("README.md", html);
+      // return writeFileAsync("README.md", html);
     })
     .then(function () {
       console.log("Successfully wrote to README.md");
