@@ -34,8 +34,6 @@ function init() {
         fs.mkdirSync(OUTPUT_DIR)
     }
     return fs.writeFileSync(outputPath, html, "utf-8");
-      // Write contents of html to index.html
-      // return writeFileAsync("README.md", html);
     })
     .then(function () {
       console.log("Successfully wrote README.md to output folder");
